@@ -7,9 +7,9 @@ import {
 
 const links = [ 
   { to: "/", label: "Welcome", icon: <FaBook /> },
+  { to: "/complaint", label: "Complaint", icon: <FaComment /> },
   { to: "/create", label: "Create GtextMail & Erp", icon: <FaBook /> },
   { to: "/deactivate", label: "Deactivate Staff Mail ", icon: <FaUserTimes /> },
-  { to: "/complaint", label: "Complaint", icon: <FaComment /> },
   { to: "/schedule-meeting", label: "Schedule Meeting", icon: <FaUserCog /> },
   // { to: "/delete", label: "Delete Staff ERP", icon: <FaUserTimes /> },
   // { to: "/zoom", label: "Zoom Links", icon: <FaVideo /> },
