@@ -1,0 +1,23 @@
+{
+  "name": "gtext-it-agent",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.4.0",
+    "tailwindcss": "^3.3.0"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "vite": "^4.4.0"
+  }
+}
