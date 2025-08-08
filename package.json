@@ -2,8 +2,10 @@
   "name": "gtext-it-agent",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "axios": "^1.6.0",
+    "eslint": "^9.33.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
@@ -16,6 +18,7 @@
     "dev": "vite"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "vite": "^4.5.14"
