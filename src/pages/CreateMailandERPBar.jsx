@@ -4,6 +4,8 @@ import ProcessingScreen from "../components/ProcessingScreen";
 export default function CreateERPAndMail() {
   const [status, setStatus] = useState("idle");
   const [data, setData] = useState({});
+  const [accessGranted, setAccessGranted] = useState(false);
+  const [codeInput, setCodeInput] = useState("");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,6 +30,37 @@ export default function CreateERPAndMail() {
 //     return <ProcessingScreen />;
 //   }
 
+const handleCodeSubmit = () => {
+  if (codeInput.trim() === "GTEXTAICHALLENGE") {
+    setAccessGranted(true);
+  } else {
+    alert("❌ Invalid access code. Please contact HR or GCOO.");
+  }
+};
+
+  // 🔹 Show access code prompt if not granted
+  
+if (!accessGranted) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md mt-6 text-center">
+      <h2 className="text-xl font-bold mb-4">Enter Access Code</h2>
+      <input
+        type="password"
+        placeholder="Enter code"
+        value={codeInput}
+        onChange={(e) => setCodeInput(e.target.value)}
+        className="border p-2 rounded w-64 mb-4"
+      />
+      <br />
+      <button
+        onClick={handleCodeSubmit}
+        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+      >
+        Submit
+      </button>
+    </div>
+  );
+}
   return (
     <div className="p-6 bg-white rounded-lg shadow-md mt-6">
       {status === "idle" && (
