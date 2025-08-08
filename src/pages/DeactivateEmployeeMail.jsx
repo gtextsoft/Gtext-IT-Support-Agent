@@ -1,39 +1,3 @@
-// // components/DeactivateEmployeeMail.jsx
-// import React, { useState } from 'react';
-
-// const DeactivateEmployeeMail = () => {
-//   const [email, setEmail] = useState('');
-//   const [response, setResponse] = useState(null);
-
-//   const handleDeactivate = async () => {
-//     const res = await fetch('http://localhost:5000/api/deactivate-mail', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify({ email }),
-//     });
-//     const data = await res.json();
-//     setResponse(data);
-//   };
-
-//   return (
-//     <div className="bar">
-//       <h2>Deactivate Ex-Employee Gtext Mail</h2>
-//       <input
-//         type="email"
-//         placeholder="Enter Gtext email"
-//         value={email}
-//         onChange={(e) => setEmail(e.target.value)}
-//       />
-//       <button onClick={handleDeactivate}>Deactivate</button>
-//       {response && (
-//         <p>{response.message}</p>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default DeactivateEmployeeMail;
-
 import React, { useState } from "react";
 
 export default function DeactivateEmployeeMail() {
@@ -42,7 +6,7 @@ export default function DeactivateEmployeeMail() {
 
   const handleDeactivate = async () => {
     setStatus("Processing...");
-    const res = await fetch("http://localhost:5000/api/deactivate-mail", {
+    const res = await fetch("https://it-agent-q1dz.onrender.com/api/deactivate-mail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
@@ -63,7 +27,7 @@ export default function DeactivateEmployeeMail() {
         className="border border-gray-300 p-2 rounded w-full mb-4"
       />
       <button
-        onClick={handleDeactivate}
+        // onClick={handleDeactivate}
         className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
       >
         Deactivate

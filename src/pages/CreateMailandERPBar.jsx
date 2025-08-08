@@ -1,21 +1,3 @@
- // components/CreateMailAndERPBar.jsx
-// import React from 'react';
-
-// const CreateMailAndERPBar = () => {
-//   return (
-//     <div className="bar">
-//       <h2>Create ERP & Gtext Mail</h2>
-//       <p>Create your Gtext mail and ERP profile with one click.</p>
-//       <a href="https://your-google-form-link.com" target="_blank" rel="noopener noreferrer">
-//         <button className="btn">Fill Google Form</button>
-//       </a>
-//     </div>
-//   );
-// };
-
-// export default CreateMailAndERPBar;
-
-
 import React, { useState, useEffect } from "react";
 import ProcessingScreen from "../components/ProcessingScreen";
 
@@ -26,7 +8,7 @@ export default function CreateERPAndMail() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (status === "processing") {
-        fetch("http://localhost:5000/api/automation-status")
+        fetch("https://it-agent-q1dz.onrender.com/api/automation-status")
           .then((res) => res.json())
           .then((res) => {
             setStatus(res.status);
@@ -53,7 +35,7 @@ export default function CreateERPAndMail() {
           <h2 className="text-2xl font-bold mb-2">Create ERP & Gtext Mail</h2>
           <p className="mb-4">Click below to submit your details.</p>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeL2Q26J-Yu-wo9Vxew91QMDE6q_sEMscX1pSQ_vKcsXI3UIQ/viewform" // your form link
+            // href="https://docs.google.com/forms/d/e/1FAIpQLSeL2Q26J-Yu-wo9Vxew91QMDE6q_sEMscX1pSQ_vKcsXI3UIQ/viewform" // your form link
             onClick={startProcessing}
             target="_blank"
             rel="noopener noreferrer"
