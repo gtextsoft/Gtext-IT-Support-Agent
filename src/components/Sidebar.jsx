@@ -5,7 +5,7 @@ import {
   FaLightbulb, FaQrcode, FaSearch, FaBook
 } from "react-icons/fa";
 
-const links = [
+const links = [ 
   { to: "/", label: "Welcome", icon: <FaBook /> },
   { to: "/create", label: "Create GtextMail & Erp", icon: <FaBook /> },
   { to: "/deactivate", label: "Deactivate Staff Mail ", icon: <FaUserTimes /> },
