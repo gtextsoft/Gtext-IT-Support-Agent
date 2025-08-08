@@ -13,27 +13,26 @@ const WelcomePage = () => {
         </p>
 
         <ol className="text-left space-y-4">
-          <li>
-            <strong>1. Create ERP & Gtext Mail:</strong> Use the{" "}
-            <span className="text-blue-600 font-semibold">“Create ERP & Gtext Mail”</span>{" "}
-            bar to set up new staff accounts instantly after filling the Google Form.
-          </li>
-          <li>
-            <strong>2. File Complaints:</strong> Go to{" "}
+        <li>
+            <strong>1. File Complaints:</strong> Go to{" "}
             <span className="text-green-600 font-semibold">“Complaint Bar”</span> to
             report IT issues. Our AI Agent will guide you or escalate to IT staff.
           </li>
+
+          <li>
+            <strong>2. Create ERP & Gtext Mail:</strong> Use the{" "}
+            <span className="text-blue-600 font-semibold">“Create ERP & Gtext Mail”</span>{" "}
+            bar to set up new staff accounts instantly after filling the Google Form.
+          </li>
+       
           <li>
             <strong>3. Deactivate Ex-Employees:</strong> HR can use the{" "}
             <span className="text-red-600 font-semibold">“Deactivate Email”</span>{" "}
             section to suspend ex-staff email accounts.
           </li>
+  <br />
           <li>
-            <strong>4. Book Meetings & Create Zoom Links:</strong> Schedule or create
-            Zoom meetings for staff, management, or events.
-          </li>
-          <li>
-            <strong>5. Explore More:</strong> Generate QR codes, submit suggestions,
+            <strong>Upcoming :</strong> Book Meetings & Create Zoom Links for staff, management or events, Generate QR codes, submit suggestions,
             or watch our app usage guide anytime.
           </li>
         </ol>
