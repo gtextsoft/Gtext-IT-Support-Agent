@@ -22,7 +22,7 @@ const WelcomePage = () => {
           <li>
             <strong>2. Create ERP & Gtext Mail:</strong> Use the{" "}
             <span className="text-blue-600 font-semibold">“Create ERP & Gtext Mail”</span>{" "}
-            bar to set up new staff accounts instantly after filling the Google Form.
+            bar to set up new staff accounts instantly after filling the Google Form. <strong>Currently restricted to HR & GCOO for test purposes</strong>
           </li>
        
           <li>
