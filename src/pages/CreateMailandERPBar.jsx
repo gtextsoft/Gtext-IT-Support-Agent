@@ -97,10 +97,10 @@ export default function CreateERPAndMail() {
             Create Your ERP & Gtext Mail
           </h2>
           <p className="mb-4">
-            Please fill in the form below: Use your personal email and your
+           Use your personal email and your
             phone number to create your gtextmail 🥳
           </p>
-          <p className="mb-4"></p>
+          <p className="mb-4 font-bold"> Click the start processing button after submitting form </p>
           <p className="mb-4 italic">
             Note: Processes might be slow due to free API versions
           </p>
