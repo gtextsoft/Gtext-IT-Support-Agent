@@ -12,8 +12,8 @@ export default function DeactivateEmployeeMail() {
 
   const handleDeactivate = async () => {
     setStatus("Processing...");
-    const res = await fetch("http://localhost:5000/api/deactivate-mail", {
-    // const res = await fetch("https://it-agent-q1dz.onrender.com/api/deactivate-mail", {
+    // const res = await fetch("http://localhost:5000/api/deactivate-mail", {
+    const res = await fetch("https://it-agent-q1dz.onrender.com/api/deactivate-mail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),

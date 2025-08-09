@@ -137,8 +137,8 @@ export default function CreateERPAndMail() {
 
   const handleVerify = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/verify-code", {
-      // const res = await fetch("https://it-agent-q1dz.onrender.com/api/verify-code", {
+      // const res = await fetch("http://localhost:5000/api/verify-code", {
+      const res = await fetch("https://it-agent-q1dz.onrender.com/api/verify-code", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code: passcode }),
