@@ -105,7 +105,7 @@ export default function DeactivateEmployeeMail() {
       <h2 className="text-2xl font-bold mb-2">Deactivate Ex-Employee Gtext Mail</h2>
       <input
         type="text"
-        placeholder="Enter employee email"
+        placeholder="Enter ex employee gtext email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="border border-gray-300 p-2 rounded w-full mb-4"
