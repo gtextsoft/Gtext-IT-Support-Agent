@@ -18,8 +18,8 @@ export default function ComplaintChat() {
     setLoading(true);
 
     try {
-    // const res = await fetch("https://it-agent-q1dz.onrender.com/api/complaint-agent", {
-    const res = await fetch("http://localhost:5000/api/complaint-agent", {
+    const res = await fetch("https://it-agent-q1dz.onrender.com/api/complaint-agent", {
+    // const res = await fetch("http://localhost:5000/api/complaint-agent", {
       method: "POST",
       credentials: "include", 
       headers: { "Content-Type": "application/json" },
