@@ -115,7 +115,7 @@ const handleScheduleClick = () => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-        placeholder="Ask something..."
+        placeholder="Ask IT Support About ERP and Gtext Mail..."
         className="border w-full p-2 mb-2"
         disabled={loading}
       />
