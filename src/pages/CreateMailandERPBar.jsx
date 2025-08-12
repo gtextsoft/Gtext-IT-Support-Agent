@@ -6,6 +6,7 @@ export default function CreateERPAndMail() {
   const [verified, setVerified] = useState(false);
   const [passcode, setPasscode] = useState("");
   const [error, setError] = useState("");
+  const [verifying, setVerifying] = useState(false);
   const iframeRef = useRef(null);
 
   // Poll automation status if processing
@@ -27,6 +28,7 @@ export default function CreateERPAndMail() {
   }, [status]);
 
   const handleVerify = async () => {
+    setVerifying(true);
     try {
       // const res = await fetch("http://localhost:5000/api/verify-code", {
       const res = await fetch(
@@ -80,9 +82,16 @@ export default function CreateERPAndMail() {
           {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
           <button
             onClick={handleVerify}
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+            disabled={verifying}
+            // className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+            className={`w-full py-2 rounded text-white ${
+              verifying
+                ? "bg-blue-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700"
+            }`}
           >
-            Verify
+            {/* Verify */}
+            {verifying ? "Verifying..." : "Verify"}
           </button>
         </div>
       </div>
@@ -97,10 +106,13 @@ export default function CreateERPAndMail() {
             Create Your ERP & Gtext Mail
           </h2>
           <p className="mb-4">
-           Use your personal email and your
-            phone number to create your gtextmail 🥳
+            Use your personal email and your phone number to create your
+            gtextmail 🥳
           </p>
-          <p className="mb-4 font-bold"> Click the start processing button after submitting form </p>
+          <p className="mb-4 font-bold">
+            {" "}
+            Click the start processing button after submitting form{" "}
+          </p>
           <p className="mb-4 italic">
             Note: Processes might be slow due to free API versions
           </p>

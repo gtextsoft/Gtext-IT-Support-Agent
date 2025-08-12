@@ -18,48 +18,50 @@ export default function ComplaintChat() {
     setLoading(true);
 
     try {
-    const res = await fetch("https://it-agent-q1dz.onrender.com/api/complaint-agent", {
-    // const res = await fetch("http://localhost:5000/api/complaint-agent", {
-      method: "POST",
-      credentials: "include", 
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: input }),
-    });
+      const res = await fetch(
+        "https://it-agent-q1dz.onrender.com/api/complaint-agent",
+        {
+          // const res = await fetch("http://localhost:5000/api/complaint-agent", {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: input }),
+        }
+      );
 
-    const data = await res.json();
+      const data = await res.json();
 
-    const botReply = data.reply || "";
+      const botReply = data.reply || "";
 
-    // Check if reply has a scheduling offer
-    const hasScheduleOffer = /schedule (a )?meeting/i.test(botReply);
+      // Check if reply has a scheduling offer
+      const hasScheduleOffer = /schedule (a )?meeting/i.test(botReply);
 
-    if (data.reply.startsWith("Redirect:")) {
-      navigate(data.reply.replace("Redirect:", "").trim());
-      return;
+      if (data.reply.startsWith("Redirect:")) {
+        navigate(data.reply.replace("Redirect:", "").trim());
+        return;
+      }
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "agent",
+          content: botReply,
+          showScheduleButton: hasScheduleOffer, // flag to render button
+        },
+      ]);
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        { role: "agent", content: "⚠️ There was an error. Please try again." },
+      ]);
+    } finally {
+      setLoading(false);
     }
+  };
 
-    setMessages((prev) => [
-      ...prev,
-      {
-        role: "agent",
-        content: botReply,
-        showScheduleButton: hasScheduleOffer, // flag to render button
-      },
-    ]);
-  }catch (err) {
-    setMessages((prev) => [
-      ...prev,
-      { role: "agent", content: "⚠️ There was an error. Please try again." },
-    ]);
-  } finally {
-    setLoading(false);
-  }
-};
-
-const handleScheduleClick = () => {
-  navigate("/schedule-meeting");
-};
-
+  const handleScheduleClick = () => {
+    navigate("/schedule-meeting");
+  };
 
   return (
     <div className="border rounded-lg p-4 bg-white shadow mt-4">
