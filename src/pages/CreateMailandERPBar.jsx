@@ -15,7 +15,7 @@ export default function CreateERPAndMail() {
     if (status === "processing") {
       interval = setInterval(() => {
         // fetch("http://localhost:5000/api/automation-status")
-        fetch("https://it-agent-q1dz.onrender.com/api/automation-status")
+        fetch("https://gtextitagentapi.onrender.com/api/automation-status")
           .then((res) => res.json())
           .then((res) => {
             setStatus(res.status);
@@ -32,7 +32,7 @@ export default function CreateERPAndMail() {
     try {
       // const res = await fetch("http://localhost:5000/api/verify-code", {
       const res = await fetch(
-        "https://it-agent-q1dz.onrender.com/api/verify-code",
+        "https://gtextitagentapi.onrender.com/api/verify-code",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -53,7 +53,7 @@ export default function CreateERPAndMail() {
     setStatus("processing"); // Show animation instantly
     try {
       // await fetch("http://localhost:5000/api/trigger-mail-erp", {
-      await fetch("https://it-agent-q1dz.onrender.com/api/trigger-mail-erp", {
+      await fetch("https://gtextitagentapi.onrender.com/api/trigger-mail-erp", {
         method: "POST",
       });
     } catch {

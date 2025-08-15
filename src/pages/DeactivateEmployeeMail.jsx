@@ -15,7 +15,7 @@ export default function DeactivateEmployeeMail() {
     setStatus("Processing...");
     // const res = await fetch("http://localhost:5000/api/deactivate-mail", {
     const res = await fetch(
-      "https://it-agent-q1dz.onrender.com/api/deactivate-mail",
+      "https://gtextitagentapi.onrender.com/api/deactivate-mail",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -32,7 +32,7 @@ export default function DeactivateEmployeeMail() {
     try {
       // const res = await fetch("http://localhost:5000/api/verify-code", {
       const res = await fetch(
-        "https://it-agent-q1dz.onrender.com/api/verify-code",
+        "https://gtextitagentapi.onrender.com/api/verify-code",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

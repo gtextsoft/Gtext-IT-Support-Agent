@@ -19,7 +19,7 @@ export default function ComplaintChat() {
 
     try {
       const res = await fetch(
-        "https://it-agent-q1dz.onrender.com/api/complaint-agent",
+        "https://gtextitagentapi.onrender.com/api/complaint-agent",
         {
           // const res = await fetch("http://localhost:5000/api/complaint-agent", {
           method: "POST",
