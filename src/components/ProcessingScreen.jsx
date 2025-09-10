@@ -9,6 +9,7 @@ const ProcessingScreen = () => {
     // Poll backend for completion
     const interval = setInterval(async () => {
       const res = await fetch('https://gtextitagentapi.onrender.com/api/automation-status'); // or your backend URL
+      // const res = await fetch('https://it-agent-q1dz.onrender.com/api/automation-status'); // or your backend URL
       const data = await res.json();
       if (data?.status === 'done') {
         setUserDetails(data.user);
