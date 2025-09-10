@@ -117,15 +117,12 @@ export default function CreateERPAndMail() {
             Note: Processes might be slow due to free API versions
           </p>
           <iframe
-            ref={iframeRef}
-            // src="https://docs.google.com/forms/d/e/1FAIpQLSeL2Q26J-Yu-wo9Vxew91QMDE6q_sEMscX1pSQ_vKcsXI3UIQ/viewform"
-            src="https://docs.google.com/forms/d/1patwpwYUMgaiQqhXmLqtCoY8M2Rn3qXiKDhs8x3QfNY/viewform"
-            width="100%"
-            height="600"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-            title="ERP & Gtext Mail Form"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfRSDd3FwTu3SOre0V8yw6mFEMWRFYn2U4FORYmjNYGB3EB7Q/viewform?embedded=true"
+            width="640"
+            height="1249"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
           >
             Loading…
           </iframe>
